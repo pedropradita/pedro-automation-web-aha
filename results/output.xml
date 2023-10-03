@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on darwin)" generated="20231003 20:48:21.602" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="/Users/pedropradita/PycharmProjects/aha/tests">
+<suite id="s1-s1" name="Signup" source="/Users/pedropradita/PycharmProjects/aha/tests/signup.robot">
+<kw name="Set Implicit Wait Globally" library="base_keyword" type="SETUP">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231003 20:48:21.855" endtime="20231003 20:48:21.855"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:21.855" endtime="20231003 20:48:21.855"/>
+</kw>
+<test id="s1-s1-t1" name="Signup with Gmail" line="30">
+<kw name="Open Signup Page" library="signup_keyword" type="SETUP">
+<arg>${${environment}_URL}</arg>
+<arg>${browser_chrome}</arg>
+<kw name="Open Home Page" library="base_keyword">
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231003 20:48:21.857" level="INFO">Opening browser 'headless chrome' to base url 'https://earnaha.com/'.</msg>
+<status status="PASS" starttime="20231003 20:48:21.857" endtime="20231003 20:48:28.187"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231003 20:48:28.187" endtime="20231003 20:48:28.675"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:21.856" endtime="20231003 20:48:28.675"/>
+</kw>
+<kw name="Click Signup Button Home Page" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signup_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:28.677" level="INFO">Clicking element 'xpath:(//a[contains(@href, '/signup')])[1]'.</msg>
+<status status="PASS" starttime="20231003 20:48:28.676" endtime="20231003 20:48:30.569"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:28.675" endtime="20231003 20:48:30.569"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:21.856" endtime="20231003 20:48:30.569"/>
+</kw>
+<kw name="Get Current Date Time Formatted" library="common_keyword">
+<var>${formatted_date_time}</var>
+<kw name="Get Current Date" library="DateTime">
+<var>${formatted_current_date}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20231003 20:48:30.570" level="INFO">${formatted_current_date} = 20231003204830</msg>
+<status status="PASS" starttime="20231003 20:48:30.569" endtime="20231003 20:48:30.570"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nCurrent date: ${formatted_current_date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231003 20:48:30.570" endtime="20231003 20:48:30.570"/>
+</kw>
+<msg timestamp="20231003 20:48:30.570" level="INFO">${formatted_date_time} = 20231003204830</msg>
+<status status="PASS" starttime="20231003 20:48:30.569" endtime="20231003 20:48:30.570"/>
+</kw>
+<kw name="Click Google 0Auth Button" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${google_0auth_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:30.571" level="INFO">Clicking element 'xpath:(//*[@type='submit'])[2]'.</msg>
+<status status="PASS" starttime="20231003 20:48:30.570" endtime="20231003 20:48:32.163"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:30.570" endtime="20231003 20:48:32.163"/>
+</kw>
+<kw name="Click Create Account" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${create_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:32.166" level="INFO">Clicking element 'xpath://span[normalize-space()='Create account']'.</msg>
+<status status="PASS" starttime="20231003 20:48:32.165" endtime="20231003 20:48:33.451"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:32.165" endtime="20231003 20:48:33.451"/>
+</kw>
+<kw name="Input First Name" library="signup_keyword">
+<arg>${test_text}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${first_name_field}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:33.452" level="INFO">Typing text 'test' into text field 'id:firstName'.</msg>
+<status status="PASS" starttime="20231003 20:48:33.451" endtime="20231003 20:48:33.651"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:33.451" endtime="20231003 20:48:33.651"/>
+</kw>
+<kw name="Input Last Name" library="signup_keyword">
+<arg>${aha_text}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${last_name_field}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:33.652" level="INFO">Typing text 'aha' into text field 'id:lastName'.</msg>
+<status status="PASS" starttime="20231003 20:48:33.651" endtime="20231003 20:48:34.180"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:33.651" endtime="20231003 20:48:34.180"/>
+</kw>
+<kw name="Click Next Button" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:34.181" level="INFO">Clicking element 'id=collectNameNext'.</msg>
+<status status="PASS" starttime="20231003 20:48:34.180" endtime="20231003 20:48:34.265"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:34.180" endtime="20231003 20:48:34.265"/>
+</kw>
+<kw name="Click Month" library="signup_keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${month_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 20:48:34.266" endtime="20231003 20:48:34.892"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${month_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:34.893" level="INFO">Clicking element 'id:month'.</msg>
+<status status="PASS" starttime="20231003 20:48:34.893" endtime="20231003 20:48:35.043"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:34.265" endtime="20231003 20:48:35.043"/>
+</kw>
+<kw name="Select Dropdown" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${option_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:35.044" level="INFO">Clicking element 'xpath://option[@value='2']'.</msg>
+<status status="PASS" starttime="20231003 20:48:35.044" endtime="20231003 20:48:35.370"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:35.043" endtime="20231003 20:48:35.370"/>
+</kw>
+<kw name="Input Date" library="signup_keyword">
+<arg>${start_date}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${day_field}</arg>
+<arg>${date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:35.372" level="INFO">Typing text '1' into text field 'id:day'.</msg>
+<status status="PASS" starttime="20231003 20:48:35.371" endtime="20231003 20:48:35.715"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:35.371" endtime="20231003 20:48:35.715"/>
+</kw>
+<kw name="Input Year" library="signup_keyword">
+<arg>${register_year}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${year_field}</arg>
+<arg>${year}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:35.715" level="INFO">Typing text '1991' into text field 'id:year'.</msg>
+<status status="PASS" starttime="20231003 20:48:35.715" endtime="20231003 20:48:35.790"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:35.715" endtime="20231003 20:48:35.791"/>
+</kw>
+<kw name="Click Gender Dropdown" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${gender_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:35.791" level="INFO">Clicking element 'id:gender'.</msg>
+<status status="PASS" starttime="20231003 20:48:35.791" endtime="20231003 20:48:35.880"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:35.791" endtime="20231003 20:48:35.880"/>
+</kw>
+<kw name="Select Gender Option" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${gender_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:35.881" level="INFO">Clicking element 'css:select[id='gender'] option[value='3']'.</msg>
+<status status="PASS" starttime="20231003 20:48:35.881" endtime="20231003 20:48:36.176"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:35.880" endtime="20231003 20:48:36.176"/>
+</kw>
+<kw name="Click Gender Next Button" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${gender_next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:36.177" level="INFO">Clicking element 'id=birthdaygenderNext'.</msg>
+<status status="PASS" starttime="20231003 20:48:36.177" endtime="20231003 20:48:36.462"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:36.177" endtime="20231003 20:48:36.463"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${create_your_own_visible}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${create_your_own}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${create_your_own}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231003 20:48:36.725" level="INFO">Current page contains element 'id:selectionc2'.</msg>
+<status status="PASS" starttime="20231003 20:48:36.463" endtime="20231003 20:48:36.725"/>
+</kw>
+<msg timestamp="20231003 20:48:36.725" level="INFO">${create_your_own_visible} = True</msg>
+<status status="PASS" starttime="20231003 20:48:36.463" endtime="20231003 20:48:36.725"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${create_your_own_visible}' == 'True'</arg>
+<arg>Click Create Owm Email</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Create Owm Email" library="signup_keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<var>${status}</var>
+<arg>${create_your_own}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231003 20:48:36.971" level="INFO">${status} = None</msg>
+<status status="PASS" starttime="20231003 20:48:36.726" endtime="20231003 20:48:36.971"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${create_your_own}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:36.971" level="INFO">Clicking element 'id:selectionc2'.</msg>
+<status status="PASS" starttime="20231003 20:48:36.971" endtime="20231003 20:48:37.175"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:36.725" endtime="20231003 20:48:37.175"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:36.725" endtime="20231003 20:48:37.175"/>
+</kw>
+<kw name="Input New Email" library="signup_keyword">
+<arg>${sign_email_front}${${environment}_text}.${formatted_date_time}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${new_email_field}</arg>
+<arg>${new_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:37.176" level="INFO">Typing text 'test.prod.20231003204830' into text field 'css:input[name='Username']'.</msg>
+<status status="PASS" starttime="20231003 20:48:37.176" endtime="20231003 20:48:37.288"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:37.175" endtime="20231003 20:48:37.288"/>
+</kw>
+<kw name="Click Email Next Button" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${email_next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:37.289" level="INFO">Clicking element 'id=next'.</msg>
+<status status="PASS" starttime="20231003 20:48:37.289" endtime="20231003 20:48:37.362"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:37.288" endtime="20231003 20:48:37.362"/>
+</kw>
+<kw name="Input New Password" library="signup_keyword">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${new_password_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231003 20:48:37.362" endtime="20231003 20:48:37.757"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${new_password_field}</arg>
+<arg>${new_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:37.757" level="INFO">Typing text 'Testaha1!' into text field 'css:input[name='Passwd']'.</msg>
+<status status="PASS" starttime="20231003 20:48:37.757" endtime="20231003 20:48:37.850"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:37.362" endtime="20231003 20:48:37.850"/>
+</kw>
+<kw name="Input New Confirm Password" library="signup_keyword">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${new_confirm_password_field}</arg>
+<arg>${new_confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:37.851" level="INFO">Typing text 'Testaha1!' into text field 'css:input[name='PasswdAgain']'.</msg>
+<status status="PASS" starttime="20231003 20:48:37.851" endtime="20231003 20:48:37.944"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:37.850" endtime="20231003 20:48:37.944"/>
+</kw>
+<kw name="Click Password Next Button" library="signup_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${password_next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231003 20:48:37.945" level="INFO">Clicking element 'id=createpasswordNext'.</msg>
+<status status="PASS" starttime="20231003 20:48:37.945" endtime="20231003 20:48:38.023"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:37.945" endtime="20231003 20:48:38.024"/>
+</kw>
+<kw name="Close Browser" library="base_keyword" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231003 20:48:38.024" endtime="20231003 20:48:38.143"/>
+</kw>
+<status status="PASS" starttime="20231003 20:48:38.024" endtime="20231003 20:48:38.143"/>
+</kw>
+<doc>Success signup with new gmail</doc>
+<tag>regression</tag>
+<tag>signup</tag>
+<tag>test</tag>
+<status status="PASS" starttime="20231003 20:48:21.855" endtime="20231003 20:48:38.143"/>
+</test>
+<doc>Signup Functionality</doc>
+<status status="PASS" starttime="20231003 20:48:21.623" endtime="20231003 20:48:38.144"/>
+</suite>
+<status status="PASS" starttime="20231003 20:48:21.603" endtime="20231003 20:48:38.145"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">signup</stat>
+<stat pass="1" fail="0" skip="0">test</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Signup">Tests.Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
